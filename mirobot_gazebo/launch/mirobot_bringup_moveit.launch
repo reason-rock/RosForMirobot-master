@@ -9,6 +9,9 @@
     <!-- ros_control trajectory control  arm launch file -->
     <include file="$(find mirobot_gazebo)/launch/mirobot_trajectory_controller.launch" />
 
+    <!-- ros_control pid param load -->
+	<!-- <rosparam file="$(find mirobot_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/>-->
+
     <!-- moveit launch file -->
     <include file="$(find mirobot_moveit_config)/launch/moveit_planning_execution.launch" />
 

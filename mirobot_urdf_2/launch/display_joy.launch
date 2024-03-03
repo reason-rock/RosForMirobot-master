@@ -1,21 +1,21 @@
 <launch>
   <arg
     name="model" />
-  <arg
+  <!-- <arg
     name="gui"
-    default="True" />
+    default="True" /> -->
   <param
     name="robot_description"
     textfile="$(find mirobot_urdf_2)/urdf/mirobot_urdf_2.xacro" />
-  <param
+  <!-- <param
     name="use_gui"
-    value="$(arg gui)" />
-  <!-- <node
+    value="$(arg gui)" /> -->
+  <node
     name="joint_state_publisher"
     pkg="joint_state_publisher"
     type="joint_state_publisher" />
-   -->
-  <node  name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+  
+  <!-- <node  name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/> -->
 
   <node
     name="robot_state_publisher"
